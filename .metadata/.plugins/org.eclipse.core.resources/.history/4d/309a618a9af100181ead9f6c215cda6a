@@ -1,0 +1,41 @@
+package datadriven;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelOpsEg {
+
+	public static void main(String[] args) throws IOException 
+	{
+		String xlpath="F:\\KayalRecordings\\Workspace\\Seleniumproject\\src\\testdata\\TestData.xlsx";
+		FileInputStream fi=new FileInputStream(xlpath);
+		
+		XSSFWorkbook wb=new XSSFWorkbook(fi);
+		XSSFSheet ws=wb.getSheet("EmpReg");
+		
+//		XSSFRow r=ws.getRow(6);
+//		XSSFCell c=r.getCell(2);
+		
+//		System.out.println(c.getStringCellValue());
+		
+		int Rc=ws.getLastRowNum();
+		System.out.println(Rc);
+		
+//		int Cc=r.getLastCellNum();
+//		System.out.println(Cc);
+		
+		for (int i = 0; i <= Rc; i++)
+		{
+			
+		}
+		
+		
+	}
+
+}

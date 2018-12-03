@@ -1,0 +1,12 @@
+package testNG;
+
+import org.testng.annotations.Test;
+
+public class BasicAnnottionsEg {
+
+	@Test
+	public void Function1()
+	{
+		System.out.println("This is Finction1 code");
+	}
+}
